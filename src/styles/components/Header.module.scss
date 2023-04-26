@@ -1,0 +1,68 @@
+@use '../variables.scss';
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 5.156rem;
+}
+
+#indodish_logo {
+  a {
+    display: flex;
+    align-items: center;
+    min-width: fit-content;
+    min-height: fit-content;
+  }
+
+  span {
+    font-size: 2em;
+    font-weight: 700;
+    color: variables.$bistre;
+  }
+}
+
+#indodish_img {
+  position: relative;
+  display: inline-block;
+  aspect-ratio: 1;
+  width: 2em;
+}
+
+.navigation_list {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navigation_list_items {
+  font-size: 1.25em;
+  font-weight: 600;
+  color: variables.$bistre;
+
+  a:hover {
+    color: variables.$fulvous;
+  }
+}
+
+.side_section {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  button {
+    background-color: variables.$bistre;
+    color: #ffffff;
+
+    &:hover {
+      background-color: variables.$fulvous;
+    }
+  }
+}
+
+.side_section_search {
+  cursor: pointer;
+
+  span {
+    margin-inline: 0.25rem;
+  }
+}
