@@ -1,0 +1,13 @@
+@use '../variables.scss';
+
+.container {
+  a {
+    display: flex;
+    align-items: center;
+
+    span {
+      font-size: 2rem;
+      color: variables.$bistre;
+    }
+  }
+}
