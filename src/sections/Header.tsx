@@ -14,7 +14,7 @@ const playfairDisplay = Playfair_Display({
 export default function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
-    <section className={`${styles.container} ${playfairDisplay.className}`}>
+    <header className={`${styles.container} ${playfairDisplay.className}`}>
       <IndODishLogo />
       <nav className={styles.navigation}>
         <ul>
@@ -83,6 +83,6 @@ export default function Header() {
           </>
         )}
       </div>
-    </section>
+    </header>
   );
 }
