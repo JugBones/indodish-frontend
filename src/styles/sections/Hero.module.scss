@@ -1,0 +1,20 @@
+@use '../variables.scss';
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  margin-block: 5rem;
+  padding-inline: variables.$page-margin-inline;
+
+  div {
+    margin-block: max(5%, 2rem);
+  }
+
+  h2 {
+    color: variables.$bistre;
+    font-size: 2.25rem;
+    font-weight: 800;
+    width: 30ch;
+    margin-block: 2rem;
+  }
+}
