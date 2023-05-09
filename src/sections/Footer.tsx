@@ -43,39 +43,45 @@ export default function Footer() {
       </div>
       <nav className={styles.information_section}>
         <h3>Information</h3>
-        <li className={styles.navigation_link_items}>
-          <Link href='/about'>About us</Link>
-        </li>
-        <li className={styles.navigation_link_items}>
-          <Link href='/blog'>Blog</Link>
-        </li>
-        <li className={styles.navigation_link_items}>
-          <Link href='/contact-us'>Contact us</Link>
-        </li>
+        <ul>
+          <li className={styles.navigation_link_items}>
+            <Link href='/about'>About us</Link>
+          </li>
+          <li className={styles.navigation_link_items}>
+            <Link href='/blog'>Blog</Link>
+          </li>
+          <li className={styles.navigation_link_items}>
+            <Link href='/contact-us'>Contact us</Link>
+          </li>
+        </ul>
       </nav>
       <nav className={styles.explore_cuisine_section}>
         <h3>Explore Cuisine</h3>
-        <li className={styles.navigation_link_items}>
-          <Link href='/about'>About us</Link>
-        </li>
-        <li className={styles.navigation_link_items}>
-          <Link href='/blog'>Blog</Link>
-        </li>
-        <li className={styles.navigation_link_items}>
-          <Link href='/contact-us'>Contact us</Link>
-        </li>
+        <ul>
+          <li className={styles.navigation_link_items}>
+            <Link href='/about'>About us</Link>
+          </li>
+          <li className={styles.navigation_link_items}>
+            <Link href='/blog'>Blog</Link>
+          </li>
+          <li className={styles.navigation_link_items}>
+            <Link href='/contact-us'>Contact us</Link>
+          </li>
+        </ul>
       </nav>
       <nav className={styles.explore_region_section}>
         <h3>Explore Region</h3>
-        <li className={styles.navigation_link_items}>
-          <Link href='/about'>About us</Link>
-        </li>
-        <li className={styles.navigation_link_items}>
-          <Link href='/blog'>Blog</Link>
-        </li>
-        <li className={styles.navigation_link_items}>
-          <Link href='/contact-us'>Contact us</Link>
-        </li>
+        <ul>
+          <li className={styles.navigation_link_items}>
+            <Link href='/about'>About us</Link>
+          </li>
+          <li className={styles.navigation_link_items}>
+            <Link href='/blog'>Blog</Link>
+          </li>
+          <li className={styles.navigation_link_items}>
+            <Link href='/contact-us'>Contact us</Link>
+          </li>
+        </ul>
       </nav>
       <div className={styles.follow_us_section}>
         <span>Follow us:</span>

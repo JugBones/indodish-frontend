@@ -8,6 +8,11 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr 0.5fr;
+
+  h3 {
+    font-size: 1.25rem;
+    margin-block: 1rem;
+  }
 }
 
 .logo_container {
@@ -44,26 +49,9 @@
   }
 }
 
-.information_section {
-  h3 {
-    margin-block: 1rem;
-  }
-}
-
-.explore_cuisine_section {
-  h3 {
-    margin-block: 1rem;
-  }
-}
-
-.explore_region_section {
-  h3 {
-    margin-block: 1rem;
-  }
-}
-
 .navigation_link_items {
   margin-block: 0.5rem;
+  font-size: 1.125rem;
 
   a:hover {
     color: variables.$dandelion;
