@@ -1,5 +1,88 @@
 @use '../variables.scss';
 
 .container {
+  color: variables.$white;
   background-color: variables.$bistre;
+  padding-block: 1.5rem;
+  padding-inline: variables.$page-margin-inline;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 0.5fr;
+}
+
+.logo_container {
+  a {
+    display: flex;
+    align-items: center;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: variables.$white;
+  }
+}
+
+.section {
+  grid-column: 1;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  div {
+    margin-block: 0.5rem;
+
+    & > a:hover {
+      color: variables.$dandelion;
+    }
+  }
+
+  span {
+    margin-right: 0.25rem;
+  }
+
+  address {
+    width: 35ch;
+  }
+}
+
+.information_section {
+  h3 {
+    margin-block: 1rem;
+  }
+}
+
+.explore_cuisine_section {
+  h3 {
+    margin-block: 1rem;
+  }
+}
+
+.explore_region_section {
+  h3 {
+    margin-block: 1rem;
+  }
+}
+
+.navigation_link_items {
+  margin-block: 0.5rem;
+
+  a:hover {
+    color: variables.$dandelion;
+  }
+}
+
+.follow_us_section {
+  display: flex;
+  gap: 0.5rem;
+  grid-column: 4;
+  align-self: last baseline;
+  justify-self: right;
+  font-size: 1.125rem;
+
+  i {
+    font-size: 1.125rem;
+  }
+
+  & > a:hover {
+    color: variables.$dandelion;
+  }
 }

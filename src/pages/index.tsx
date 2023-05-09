@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Header from '@/sections/Header';
 import styles from '@/styles/pages/Home.module.scss';
+import Footer from '@/sections/Footer';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Header />
+      <Footer />
     </>
   );
 }
