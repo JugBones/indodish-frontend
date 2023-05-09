@@ -1,5 +1,7 @@
 # IndODish - Frontend
 
+COMP6703001 - Web Application Development and Security (Final Project)
+
 ## Script
 
 Install node_modules before running the app.
