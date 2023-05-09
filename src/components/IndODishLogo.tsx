@@ -6,11 +6,7 @@ import styles from '@/styles/components/IndODishLogo.module.scss';
 
 const playfairDisplay = Playfair_Display({ weight: '700', subsets: ['latin'] });
 
-type IndODishLogoProp = {
-  dark: boolean;
-};
-
-export default function IndODishLogo({ dark }: IndODishLogoProp) {
+export default function IndODishLogo() {
   return (
     <h1 className={styles.container}>
       <Link href='/'>
