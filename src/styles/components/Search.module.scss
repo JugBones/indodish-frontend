@@ -1,0 +1,16 @@
+@use '../variables.scss';
+.container {
+  margin-right: 1rem;
+  color: variables.$bistre;
+
+  i {
+    font-size: 1.125rem;
+    padding-inline: 0.25rem;
+  }
+
+  span {
+    cursor: pointer;
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+}
