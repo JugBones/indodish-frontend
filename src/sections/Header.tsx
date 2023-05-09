@@ -5,6 +5,7 @@ import { Playfair_Display } from 'next/font/google';
 import styles from '@/styles/sections/Header.module.scss';
 import Button from '@/components/Button';
 import Profile from '@/components/Profile';
+import Search from '@/components/Search';
 
 const playfairDisplay = Playfair_Display({
   weight: ['400', '600'],
@@ -31,6 +32,7 @@ export default function Header() {
       </nav>
 
       <div className={styles.side_section}>
+        <Search />
         {isLoggedIn ? (
           <>
             <Link href='/cart'>
