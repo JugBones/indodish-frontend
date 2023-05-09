@@ -1,0 +1,30 @@
+@use '../variables.scss';
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-inline: variables.$page-margin-inline;
+  padding-block: min(10rem, 10%);
+  background-color: variables.$bistre;
+  color: variables.$white;
+  div {
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 4rem;
+      z-index: 1;
+    }
+
+    p {
+      font-size: 1.75rem;
+      width: 35ch;
+      margin-bottom: 4rem;
+      z-index: 1;
+    }
+  }
+}
+
+.batik_background {
+  opacity: 5%;
+}
