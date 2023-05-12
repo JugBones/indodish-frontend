@@ -58,7 +58,7 @@ export default function Header() {
                 borderColor: '#41280e',
               }}
             >
-              <Link href='/sign-in' style={{ color: 'inherit' }}>
+              <Link href='/signin' style={{ color: 'inherit' }}>
                 Sign in
               </Link>
             </Button>
@@ -78,7 +78,7 @@ export default function Header() {
                 backgroundColor: '#e37300',
               }}
             >
-              <Link href='/sign-up' style={{ color: '#ffffff' }}>
+              <Link href='/signup' style={{ color: '#ffffff' }}>
                 Sign up
               </Link>
             </Button>
