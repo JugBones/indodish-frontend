@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import styles from '@/styles/pages/Auth.module.scss';
+import Link from 'next/link';
 
 const SignUp: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -11,7 +13,7 @@ const SignUp: React.FC = () => {
   };
 
   return (
-    <div className="sign-up-container">
+    <div className={styles.authContainer}>
       <h2>Sign Up</h2>
       <form>
         <input
@@ -36,8 +38,12 @@ const SignUp: React.FC = () => {
           Sign Up
         </button>
       </form>
+      <div className='register'>
+          Already have an account? <Link href="/signin" style={{ color: 'yellow' }}>Login</Link> here.
+      </div>
     </div>
   );
 };
 
 export default SignUp;
+

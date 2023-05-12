@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import styles from '@/styles/pages/Auth.module.scss';
+import IndODishLogo from '@/components/IndODishLogo';
+import Link from 'next/link';
 
 const SignIn: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -10,7 +13,12 @@ const SignIn: React.FC = () => {
   };
 
   return (
-    <div className="sign-in-container">
+    <div className={styles.authContainer}>
+      <div>
+      <IndODishLogo />
+      <h1>IndODish</h1>
+      </div>
+      
       <h2>Sign In</h2>
       <form>
         <input
@@ -25,10 +33,16 @@ const SignIn: React.FC = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="button" onClick={handleSignIn}>
-          Sign In
+        <button className="signin_default" type="button" onClick={handleSignIn}>
+          Sign in
+        </button>
+        <button className="signin_gojek" type="button" onClick={handleSignIn}>
+          Sign in with Gojek
         </button>
       </form>
+      <div className='register'>
+          Don't have an account? <Link href="/signup" style={{ color: 'yellow' }}>Register</Link> now.
+      </div>
     </div>
   );
 };
