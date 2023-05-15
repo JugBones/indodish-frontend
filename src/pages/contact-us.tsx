@@ -1,3 +1,4 @@
+import ContactForm from '@/sections/ContactForm';
 import Footer from '@/sections/Footer';
 import Header from '@/sections/Header';
 import Head from 'next/head';
@@ -12,6 +13,7 @@ export default function ContactUs() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Header />
+      <ContactForm />
       <Footer />
     </>
   );
