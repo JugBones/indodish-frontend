@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Martabak",
+    "price": 30000,
+    "imgUrl": "../../public/ImgItem/Martabak.jpeg"
+  },
+  {
+    "id": 2,
+    "name": "Pempek",
+    "price": 20000,
+    "imgUrl": "../../public/ImgItem/Pempek.jpeg"
+  },
+  {
+    "id": 3,
+    "name": "Ketoprak",
+    "price": 14000,
+    "imgUrl": "../../public/ImgItem/Ketoprak.jpeg"
+  },
+  {
+    "id": 4,
+    "name": "Papeda",
+    "price": 15000,
+    "imgUrl": "../../public/ImgItem/Papeda.jpeg"
+  }
+]
