@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Playfair_Display } from 'next/font/google';
 import indodishLogo from '../../public/indodish-logo.webp';
+import batikBackground from '../../public/batik-background.webp';
 import styles from '@/styles/sections/Footer.module.scss';
 
 const playfairDisplay = Playfair_Display({
@@ -95,6 +96,12 @@ export default function Footer() {
           <i className='bi bi-whatsapp' />
         </Link>
       </div>
+      <Image
+        className={styles.batik_background}
+        src={batikBackground}
+        alt='Batik Background'
+        fill
+      />
     </footer>
   );
 }
