@@ -1,0 +1,20 @@
+@use '../variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-inline: variables.$page-margin-inline;
+  h2 {
+    margin-block: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  p {
+    margin-block: 1rem;
+    font-size: 1.25rem;
+    max-width: 80ch;
+  }
+}

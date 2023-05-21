@@ -1,11 +1,14 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatch, RootState } from '../store/store';
 import IndODishLogo from '@/components/IndODishLogo';
 import { Playfair_Display } from 'next/font/google';
 import styles from '@/styles/sections/Header.module.scss';
 import Button from '@/components/Button';
 import Profile from '@/components/Profile';
 import Search from '@/components/Search';
+import { refreshAccessToken } from '@/features/authSlice';
 
 const playfairDisplay = Playfair_Display({
   weight: ['400', '600'],
@@ -13,10 +16,16 @@ const playfairDisplay = Playfair_Display({
 });
 
 export default function Header() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const dispatch = useDispatch<AppDispatch>();
+  const { isLoading, error, user } = useSelector(
+    (state: RootState) => state.auth
+  );
+  useEffect(() => {
+    dispatch(refreshAccessToken());
+  }, []);
   return (
     <header className={`${styles.container} ${playfairDisplay.className}`}>
-      <IndODishLogo />
+      <IndODishLogo color={'#41280e'} />
       <nav className={styles.navigation}>
         <ul>
           <li className={styles.navigation_list_items}>
@@ -33,7 +42,7 @@ export default function Header() {
 
       <div className={styles.side_section}>
         <Search />
-        {isLoggedIn ? (
+        {user ? (
           <>
             <Link href='/cart'>
               <i className='bi bi-cart3' />
@@ -58,7 +67,7 @@ export default function Header() {
                 borderColor: '#41280e',
               }}
             >
-              <Link href='/signin' style={{ color: 'inherit' }}>
+              <Link href='/sign-in' style={{ color: 'inherit' }}>
                 Sign in
               </Link>
             </Button>
@@ -78,7 +87,7 @@ export default function Header() {
                 backgroundColor: '#e37300',
               }}
             >
-              <Link href='/signup' style={{ color: '#ffffff' }}>
+              <Link href='/sign-up' style={{ color: '#ffffff' }}>
                 Sign up
               </Link>
             </Button>

@@ -32,7 +32,7 @@ export default function BrowseLocation() {
           }}
           hoverStying={{ backgroundColor: '#b85c00' }}
         >
-          <Link href=''>Explore Region</Link>
+          <Link href='/search'>Explore Region</Link>
         </Button>
       </div>
       <Image

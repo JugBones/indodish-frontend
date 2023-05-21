@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import Head from 'next/head';
 import Header from '@/sections/Header';
 import Footer from '@/sections/Footer';
@@ -5,6 +7,9 @@ import Hero from '@/sections/Hero';
 import BrowseLocation from '@/sections/BrowseLocation';
 import MostPopular from '@/sections/MostPopular';
 import styles from '@/styles/pages/Home.module.scss';
+import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatch, RootState } from '@/store/store';
+import { refreshAccessToken } from '@/features/authSlice';
 
 export default function Home() {
   return (

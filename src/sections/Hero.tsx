@@ -31,7 +31,7 @@ export default function Hero() {
           }}
           hoverStying={{ backgroundColor: '#e37300' }}
         >
-          <Link href=''>Explore Cuisine</Link>
+          <Link href='/search'>Explore Cuisine</Link>
         </Button>
       </div>
       <Image src={HeroImage} alt='Nasi' width='650' height='650' unoptimized />
