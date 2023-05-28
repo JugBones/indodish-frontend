@@ -18,3 +18,11 @@
   z-index: -1;
   object-fit: cover;
 }
+
+.image_zone {
+  border: 1px dotted #ccc;
+  color: variables.$white;
+  text-align: center;
+  padding-block: 5rem;
+  cursor: pointer;
+}

@@ -1,0 +1,19 @@
+@use '../variables.scss';
+
+.container {
+  border: variables.$light-gray 1px solid;
+  background-color: variables.$white;
+  border-radius: 5px;
+  width: fit-content;
+
+  h3 {
+    padding-top: 1rem;
+    padding-inline: 1rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  p {
+    padding-inline: 1rem;
+  }
+}

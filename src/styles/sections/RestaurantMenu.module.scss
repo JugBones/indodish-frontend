@@ -1,0 +1,10 @@
+@use '../variables.scss';
+
+.container {
+  margin-inline: variables.$page-margin-inline;
+
+  h3 {
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+}

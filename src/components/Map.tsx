@@ -1,26 +1,32 @@
-import { useState, useEffect, useRef, useMemo, useCallback } from 'react';
+import { useState, useRef, useMemo, useCallback, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
 import 'leaflet-defaulticon-compatibility';
-
-const center = {
-  lat: 51.505,
-  lng: -0.09,
-};
+import { RootState } from '@/store/store';
+import { useDispatch, useSelector } from 'react-redux';
+import { getCoordinate, setCoordinate } from '@/features/createRestaurantSlice';
 
 function DraggableMarker() {
   const [draggable, setDraggable] = useState(true);
-  const [position, setPosition] = useState(center);
   const markerRef = useRef<any>(null);
+  const { isLoading, latitude, longitude, error } = useSelector(
+    (state: RootState) => state.createRestaurant
+  );
+  const dispatch = useDispatch();
   const eventHandlers = useMemo(
     () => ({
       dragend() {
         const marker = markerRef.current;
         if (marker != null) {
-          setPosition(marker.getLatLng());
-          console.log(position);
+          dispatch(getCoordinate());
         }
+        dispatch(
+          setCoordinate({
+            latitude: Object.values(marker.getLatLng())[0],
+            longitude: Object.values(marker.getLatLng())[1],
+          })
+        );
       },
     }),
     []
@@ -33,24 +39,26 @@ function DraggableMarker() {
     <Marker
       draggable={draggable}
       eventHandlers={eventHandlers}
-      position={position}
+      position={{ lat: latitude, lng: longitude }}
       ref={markerRef}
     >
       <Popup minWidth={90}>
         <span onClick={toggleDraggable}>
-          {draggable
-            ? 'Marker is draggable'
-            : 'Click here to make marker draggable'}
+          {latitude}, {longitude}
         </span>
       </Popup>
     </Marker>
   );
 }
 
-export default function Map({ position, setPosition }) {
+export default function Map() {
+  const { isLoading, latitude, longitude, error } = useSelector(
+    (state: RootState) => state.createRestaurant
+  );
+
   return (
     <MapContainer
-      center={center}
+      center={{ lat: latitude, lng: longitude }}
       zoom={14}
       scrollWheelZoom={true}
       style={{ height: '100%', width: '100%' }}

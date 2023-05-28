@@ -5,7 +5,7 @@ import Header from '@/sections/Header';
 import Footer from '@/sections/Footer';
 import Hero from '@/sections/Hero';
 import BrowseLocation from '@/sections/BrowseLocation';
-import MostPopular from '@/sections/MostPopular';
+import NearbyRestaurant from '@/sections/NearbyRestaurant';
 import styles from '@/styles/pages/Home.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '@/store/store';
@@ -23,7 +23,7 @@ export default function Home() {
       <Header />
       <Hero />
       <BrowseLocation />
-      <MostPopular />
+      <NearbyRestaurant />
       <Footer />
     </>
   );

@@ -1,0 +1,11 @@
+@use '../variables.scss';
+
+.container {
+  padding-inline: variables.$page-margin-inline;
+
+  > h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: variables.$bistre;
+  }
+}
