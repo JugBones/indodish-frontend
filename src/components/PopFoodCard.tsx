@@ -10,7 +10,7 @@ const PopFoodCard: React.FC = () => {
       <h1 className={styles.title}>
       <Link href="/cuisine">Martabak</Link> 
       </h1>
-      <span className={styles.rating}>4.9</span>
+      <span className={styles.rating}>4.9 ⭐</span>
       <p className={styles.desc}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </p>
