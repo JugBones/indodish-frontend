@@ -18,6 +18,7 @@ export default function NearbyRestaurant() {
   );
 
   useEffect(() => {
+    console.log(restaurants);
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
         dispatch(
@@ -36,7 +37,14 @@ export default function NearbyRestaurant() {
       <h2>Nearby Restaurant</h2>
       <div>
         {restaurants.length > 0 ? (
-          restaurants.map((restaurant) => <FoodCard />)
+          restaurants.map((restaurant) => (
+            <FoodCard
+              key={restaurant.id}
+              restaurantName={restaurant.name}
+              rating_sum={restaurant.rating_sum}
+              number_of_voters={restaurant.number_of_voters}
+            />
+          ))
         ) : (
           <p>No Result</p>
         )}

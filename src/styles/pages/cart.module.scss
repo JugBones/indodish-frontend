@@ -1,0 +1,26 @@
+@use '../variables.scss';
+
+.header {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.container {
+  background-color: variables.$bistre;
+  margin-inline: 20%;
+  margin-block: 5rem;
+
+  div {
+    position: relative;
+    background-color: variables.$bistre;
+    isolation: isolate;
+    border-radius: 5px;
+  }
+}
+
+.batik_background {
+  -webkit-user-drag: none;
+  opacity: 5%;
+  z-index: -1;
+  object-fit: cover;
+}

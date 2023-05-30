@@ -9,32 +9,21 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
-  webpack: (config) => {
-    // Grab the existing rule that handles SVG imports
-    const fileLoaderRule = config.module.rules.find((rule) =>
-      rule.test?.test?.('.svg')
-    );
-
-    config.module.rules.push(
-      // Reapply the existing rule, but only for svg imports ending in ?url
+  images: {
+    remotePatterns: [
       {
-        ...fileLoaderRule,
-        test: /\.svg$/i,
-        resourceQuery: /url/, // *.svg?url
+        protocol: 'http',
+        hostname: 'localhost',
       },
-      // Convert all other *.svg imports to React components
+    ],
+  },
+  async rewrites() {
+    return [
       {
-        test: /\.svg$/i,
-        issuer: /\.[jt]sx?$/,
-        resourceQuery: { not: /url/ }, // exclude if *.svg?url
-        use: ['@svgr/webpack'],
-      }
-    );
-
-    // Modify the file loader rule to ignore *.svg, since we have it handled now.
-    fileLoaderRule.exclude = /\.svg$/i;
-
-    return config;
+        source: '/restaurant/[restaurant_name]',
+        destination: 'http://localhost:8000/restaurant/[restaurant_name]',
+      },
+    ];
   },
 };
 

@@ -1,13 +1,29 @@
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
 import styles from '@/styles/sections/RestaurantMenu.module.scss';
 import { Playfair_Display } from 'next/font/google';
+import MenuItem from '@/components/MenuItem';
 
 const playfairDisplay = Playfair_Display({
   weight: ['400', '600'],
   subsets: ['latin'],
 });
 
-export default function RestaurantMenu() {
+interface RestaurantMenuProps {
+  menu: [
+    {
+      id: string;
+      name: string;
+      description: string;
+      price: number;
+      category: string;
+      rating_sum: number;
+      number_of_voters: number;
+    }
+  ];
+}
+
+export default function RestaurantMenu({ menu }: RestaurantMenuProps) {
+  console.log(menu);
   return (
     <section className={`${styles.container} ${playfairDisplay.className}`}>
       <h3>Menu</h3>
@@ -19,18 +35,74 @@ export default function RestaurantMenu() {
           <Tab>Dessert</Tab>
           <Tab>Beverage</Tab>
         </TabList>
-
-        <TabPanels>
-          <TabPanel>
-            <p>one!</p>
-          </TabPanel>
-          <TabPanel>
-            <p>two!</p>
-          </TabPanel>
-          <TabPanel>
-            <p>three!</p>
-          </TabPanel>
-        </TabPanels>
+        {menu && (
+          <TabPanels>
+            <TabPanel>
+              {menu.filter((m) => m.category === 'snack').length > 0 ? (
+                menu
+                  .filter((m) => m.category === 'snack')
+                  .map((m) => (
+                    <MenuItem
+                      id={m.id}
+                      name={m.name}
+                      description={m.description}
+                      price={m.price}
+                    />
+                  ))
+              ) : (
+                <p>No Menu Available</p>
+              )}
+            </TabPanel>
+            <TabPanel>
+              {menu
+                .filter((m) => m.category === 'appetizer')
+                .map((m) => (
+                  <MenuItem
+                    id={m.id}
+                    name={m.name}
+                    description={m.description}
+                    price={m.price}
+                  />
+                ))}
+            </TabPanel>
+            <TabPanel>
+              {menu
+                .filter((m) => m.category === 'main_course')
+                .map((m) => (
+                  <MenuItem
+                    id={m.id}
+                    name={m.name}
+                    description={m.description}
+                    price={m.price}
+                  />
+                ))}
+            </TabPanel>
+            <TabPanel>
+              {menu
+                .filter((m) => m.category === 'dessert')
+                .map((m) => (
+                  <MenuItem
+                    id={m.id}
+                    name={m.name}
+                    description={m.description}
+                    price={m.price}
+                  />
+                ))}
+            </TabPanel>
+            <TabPanel>
+              {menu
+                .filter((m) => m.category === 'beverage')
+                .map((m) => (
+                  <MenuItem
+                    id={m.id}
+                    name={m.name}
+                    description={m.description}
+                    price={m.price}
+                  />
+                ))}
+            </TabPanel>
+          </TabPanels>
+        )}
       </Tabs>
     </section>
   );

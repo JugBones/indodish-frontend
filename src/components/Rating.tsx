@@ -9,10 +9,10 @@ export default function Rating({ rating, reviews }: RatingProps) {
   return (
     <div className={styles.container}>
       <div>
-        {[...Array(rating)].map(() => (
+        {[...Array(Math.floor(rating / reviews))].map(() => (
           <i className={`bi bi-star-fill ${styles.star_fill}`} />
         ))}
-        {[...Array(5 - rating)].map(() => (
+        {[...Array(5 - Math.floor(rating / reviews))].map(() => (
           <i className={`bi bi-star ${styles.star}`} />
         ))}
       </div>

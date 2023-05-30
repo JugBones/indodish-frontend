@@ -9,13 +9,32 @@ const playfairDisplay = Playfair_Display({
   subsets: ['latin'],
 });
 
-export default function RestaurantInfo() {
+interface RestaurantInfoProps {
+  name: string;
+  description: string;
+  address: string;
+}
+
+export default function RestaurantInfo({
+  name,
+  description,
+  address,
+}: RestaurantInfoProps) {
+  const URL = process.env.NEXT_PUBLIC_API_URL;
+
   return (
     <section className={`${styles.container} ${playfairDisplay.className}`}>
-      <Image src={Remboelan} alt='' width={500} height={500} />
+      <Image
+        src={`${URL}/images/restaurant-image?restaurant_name=${name}&size=500`}
+        alt=''
+        width={500}
+        height={500}
+        unoptimized
+      />
       <div>
-        <h3>Restaurant Name</h3>
-        <p>Description</p>
+        <h3>{name}</h3>
+        <p>{description}</p>
+        <p>{address}</p>
       </div>
       <Image
         className={styles.batik_background}
