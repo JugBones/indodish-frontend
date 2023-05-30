@@ -11,8 +11,14 @@
   
   .title {
     font-size: 18px;
-    font-weight: bold;
-    color: #d1411e;
+    a {
+      color: rgb(255, 177, 53);
+      font-weight: 600;
+  
+      &:hover {
+        color: rgb(185, 115, 3);
+      }
+    }
   }
   
   .rating {
