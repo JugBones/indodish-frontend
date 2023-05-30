@@ -23,7 +23,6 @@ interface RestaurantMenuProps {
 }
 
 export default function RestaurantMenu({ menu }: RestaurantMenuProps) {
-  console.log(menu);
   return (
     <section className={`${styles.container} ${playfairDisplay.className}`}>
       <h3>Menu</h3>

@@ -10,8 +10,6 @@ interface MenuItemProps {
   name: string;
   description: string;
   price: number;
-  rating_sum: number;
-  number_of_voters: number;
 }
 
 export default function MenuItem({

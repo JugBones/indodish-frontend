@@ -13,7 +13,7 @@ export default function Search() {
       </Head>
       <Header />
       <SearchRegion />
-      <PopularCuisine />
+      <PopularCuisine cuisines={{}} />
       <NearbyRestaurant />
       <Footer />
     </>

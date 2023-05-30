@@ -12,7 +12,7 @@ import {
 interface CardItemCardProps {
   id: string;
   dishName: string;
-  price: number;
+  price: string;
   quantity: number;
 }
 

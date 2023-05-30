@@ -27,7 +27,7 @@ interface Menu {
 export default function RestaurantPage(props: Restaurant) {
   const router = useRouter();
   const dispatch = useDispatch<AppDispatch>();
-  const { isLoading, error, restaurants } = useSelector(
+  const { isLoading, error, restaurant } = useSelector(
     (state: RootState) => state.restaurants
   );
 
@@ -52,11 +52,11 @@ export default function RestaurantPage(props: Restaurant) {
       ) : (
         <>
           <RestaurantInfo
-            name={restaurants.name}
-            description={restaurants.description}
-            address={restaurants.address}
+            name={restaurant.name}
+            description={restaurant.description}
+            address={restaurant.address}
           />
-          <RestaurantMenu menu={restaurants.menu} />
+          <RestaurantMenu menu={restaurant.menu} />
         </>
       )}
       <Footer />

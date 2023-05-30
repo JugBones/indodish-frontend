@@ -43,10 +43,12 @@ interface Restaurant {
   id: string;
   name: string;
   description: string;
+  address: string;
   rating_sum: number;
   number_of_voters: number;
   menu: [
     {
+      id: string;
       name: string;
       description: string;
       rating_sum: number;
@@ -60,6 +62,7 @@ interface Restaurant {
 const initialState = {
   isLoading: false,
   restaurants: [] as Restaurant[],
+  restaurant: {} as Restaurant,
   error: null as unknown | null,
 };
 
@@ -84,7 +87,7 @@ const restaurantSlice = createSlice({
 
     builder.addCase(getRestaurant.fulfilled, (state, action) => {
       state.isLoading = false;
-      state.restaurants = action.payload;
+      state.restaurant = action.payload;
       state.error = null;
     });
     builder.addCase(getRestaurant.pending, (state, _) => {

@@ -91,8 +91,8 @@ export const deleteCartItems = createAsyncThunk(
 
 interface CartItem {
   id: string;
-  dishName: string;
-  price: number;
+  name: string;
+  price: string;
   quantity: number;
 }
 

@@ -28,7 +28,6 @@ export default function NearbyRestaurant() {
           })
         );
       });
-      dispatch(getNearbyRestaurant());
     }
   }, []);
 
