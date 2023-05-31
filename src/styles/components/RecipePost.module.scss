@@ -1,0 +1,27 @@
+.recipePostContainer {
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+.recipePost {
+    background-color: #f2f2f2;
+    padding: 50px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 40px auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+.recipePostTitle {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+.recipePostContent {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  

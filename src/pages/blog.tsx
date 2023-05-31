@@ -1,8 +1,48 @@
+// blog.tsx
 import Footer from '@/sections/Footer';
 import Header from '@/sections/Header';
 import Head from 'next/head';
+import BlogPost from '../components/BlogPost';
+import RecipePost from '../components/RecipePost';
 
 export default function Blog() {
+  // Array of blog posts
+  const blogPosts = [
+    {
+      id: 1,
+      title: "Blog Post 1",
+      content: "Content for Blog Post 1",
+    },
+    {
+      id: 2,
+      title: "Blog Post 2",
+      content: "Content for Blog Post 2",
+    },
+    {
+      id: 3,
+      title: "Blog Post 3",
+      content: "Content for Blog Post 3",
+    },
+  ];
+
+  const recipePosts = [
+    {
+      id: 1,
+      title: "Recipe Post 1",
+      content: "Content for Recipe Post 1",
+    },
+    {
+      id: 2,
+      title: "Recipe Post 2",
+      content: "Content for Recipe Post 2",
+    },
+    {
+      id: 3,
+      title: "Recipe Post 3",
+      content: "Content for Recipe Post 3",
+    },
+  ];
+
   return (
     <>
       <Head>
@@ -12,6 +52,17 @@ export default function Blog() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Header />
+
+      <main>
+        {blogPosts.map((post) => (
+          <BlogPost key={post.id} title={post.title} content={post.content} />
+        ))}
+        
+        {recipePosts.map((post) => (
+          <RecipePost key={post.id} title={post.title} content={post.content} />
+        ))}
+      </main>
+
       <Footer />
     </>
   );
