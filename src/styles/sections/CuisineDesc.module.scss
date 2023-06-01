@@ -1,0 +1,47 @@
+.cuisineDesc {
+    display: flex;
+    align-items: center;
+    margin: 2rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgb(67, 48, 24);
+    justify-content: center;
+    height: 1000px;
+  }
+  
+  .cuisineDesc__image {
+    width: 500px;
+    height: 400px;
+    margin-right: 7rem;
+
+  }
+  
+  .cuisineDesc__title {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: azure;
+    text-align: center;
+    padding-bottom: 40px;
+    font-family: 'Playfair Display';
+    font-weight: bold;
+  }
+  
+  .cuisineDesc__description1 {
+    font-size: 1.2rem;
+    color: azure;
+    max-width: 500px;
+    text-align: justify;
+    font-family: 'Playfair Display';
+  }
+
+  .cuisineDesc__description2 {
+    font-size: 1.2rem;
+    color: azure;
+    max-width: 500px;
+    text-align: justify;
+    margin-top: 3rem;
+    font-family: 'Playfair Display';
+  }
+  

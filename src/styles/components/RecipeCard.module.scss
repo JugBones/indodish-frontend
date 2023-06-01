@@ -1,0 +1,28 @@
+.container {
+    width: 22%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    cursor: pointer;
+  }
+  
+  .title {
+    font-size: 18px;
+    a {
+      color: rgb(255, 177, 53);
+      font-weight: 600;
+  
+      &:hover {
+        color: rgb(185, 115, 3);
+      }
+    }
+  }
+  
+  .desc {
+    text-align: center;
+    color: #777;
+    padding-bottom: 50px;
+  }
