@@ -2,9 +2,13 @@
 
 .container {
   padding-inline: variables.$page-margin-inline;
+  padding-block: min(10rem, 10%);
 
   > h2 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+    z-index: 1;
+    // font-size: 1.5rem;
     font-weight: 700;
     color: variables.$bistre;
     padding-top: 30px;

@@ -4,7 +4,8 @@ import Header from '@/sections/Header';
 import Footer from '@/sections/Footer';
 import Hero from '@/sections/Hero';
 import BrowseLocation from '@/sections/BrowseLocation';
-import NearbyRestaurant from '@/sections/NearbyRestaurant';
+// import NearbyRestaurant from '@/sections/NearbyRestaurant';
+import PopularCuisine from '@/sections/PopularCuisine';
 
 export default function Home() {
   return (
@@ -18,7 +19,8 @@ export default function Home() {
       <Header />
       <Hero />
       <BrowseLocation />
-      <NearbyRestaurant />
+      {/* <NearbyRestaurant /> */}
+      <PopularCuisine cuisines={{}} />
       <Footer />
     </>
   );
