@@ -25,7 +25,6 @@ export default function PopularCuisine({ cuisines }: PopularCuisineProps) {
         <PopFoodCard />
         <PopFoodCard />
         <PopFoodCard />
-        <PopFoodCard />
       </div>
       {/* <div className={styles.containerfood}>
         <div className={styles.food1}>

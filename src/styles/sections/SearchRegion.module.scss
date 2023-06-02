@@ -13,17 +13,26 @@
     font-weight: 700;
   }
 
-  > div {
+  > .buttonsContainer {
     display: flex;
+    flex-wrap: wrap;
     margin-top: 2rem;
     width: 100%;
     justify-content: space-between;
+  }
+
+  > .backgroundContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
   }
 }
 
 .batik_background {
   -webkit-user-drag: none;
   opacity: 5%;
-  z-index: -1;
   object-fit: cover;
 }

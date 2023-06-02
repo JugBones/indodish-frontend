@@ -34,7 +34,9 @@ export default function Hero() {
           <Link href='/search'>Explore Cuisine</Link>
         </Button>
       </div>
-      <Image src={HeroImage} alt='Nasi' width='650' height='650' unoptimized />
+      <div className={styles.image_container}>
+        <Image src={HeroImage} alt='Nasi' width='650' height='650' unoptimized />
+      </div>
     </section>
   );
 }

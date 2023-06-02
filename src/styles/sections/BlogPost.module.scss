@@ -1,0 +1,27 @@
+.blogPostContainer {
+  background-image: url('/batik-background.webp');
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.blogPost {
+  background-color: #f2f2f2;
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.blogPostTitle {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.blogPostContent {
+  font-size: 16px;
+  line-height: 1.5;
+}

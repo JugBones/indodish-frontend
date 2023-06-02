@@ -15,9 +15,10 @@ export default function SearchRegion() {
   return (
     <section className={styles.container}>
       <h2>Search by Region</h2>
-      <div>
+      <div className={styles.buttonsContainer}>
         {islands.map((region) => (
           <Button
+            key={region}
             styling={{
               padding: '0.5rem 0.75rem',
               marginBottom: '1.5rem',
@@ -46,12 +47,14 @@ export default function SearchRegion() {
           </Button>
         ))}
       </div>
-      <Image
+      <div className={styles.backgroundContainer}>
+        <Image
         className={styles.batik_background}
         src={BatikBackground}
         alt='Batik Background'
         fill
-      />
+        />
+      </div>
     </section>
   );
 }

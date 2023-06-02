@@ -23,10 +23,17 @@ export default function Header() {
   useEffect(() => {
     dispatch(refreshAccessToken());
   }, []);
+
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <header className={`${styles.container} ${playfairDisplay.className}`}>
       <IndODishLogo color={'#41280e'} />
-      <nav className={styles.navigation}>
+      <nav className={`${styles.navigation} ${isMobileMenuOpen ? styles.open : ''}`}>
         <ul>
           <li className={styles.navigation_list_items}>
             <Link href='/about'>About</Link>
@@ -41,6 +48,9 @@ export default function Header() {
       </nav>
 
       <div className={styles.side_section}>
+        <button className={styles.mobile_menu_toggle} onClick={toggleMobileMenu}>
+          <i className='bi bi-list' />
+        </button>
         <Search />
         {user ? (
           <>

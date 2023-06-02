@@ -5,21 +5,30 @@
   padding-block: min(10rem, 10%);
 
   > h2 {
-    font-size: 2.5rem;
-    margin-bottom: 4rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
     z-index: 1;
-    // font-size: 1.5rem;
     font-weight: 700;
     color: variables.$bistre;
     padding-top: 30px;
+
+    @media (min-width: 768px) {
+      font-size: 2.5rem;
+      margin-bottom: 4rem;
+    }
   }
 }
 
 .desc {
-  font-size: 24px;
+  font-size: 1rem;
   color: #444;
-  width: 70%;
-  padding-bottom: 30px;
+  width: 100%;
+  padding-bottom: 2rem;
+
+  @media (min-width: 768px) {
+    font-size: 1.125rem;
+    width: 70%;
+  }
 }
 
 .wrapper {
@@ -28,6 +37,19 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+
+  > * {
+    width: 100%;
+    margin-bottom: 2rem;
+
+    @media (min-width: 768px) {
+      width: 50%;
+    }
+
+    @media (min-width: 1200px) {
+      width: 33.333%;
+    }
+  }
 }
 
 // .containerfood {

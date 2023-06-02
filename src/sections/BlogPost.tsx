@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/components/BlogPost.module.scss';
+import styles from '../styles/sections/BlogPost.module.scss';
 
 interface BlogPostProps {
 title: string;

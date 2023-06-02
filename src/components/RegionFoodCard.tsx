@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../styles/components/PopFoodCard.module.scss";
+import styles from "../styles/components/RegionFoodCard.module.scss";
 
-const PopFoodCard: React.FC = () => {
+const RegionFoodCard: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.martabak}>
@@ -19,4 +19,4 @@ const PopFoodCard: React.FC = () => {
   );
 };
 
-export default PopFoodCard;
+export default RegionFoodCard;

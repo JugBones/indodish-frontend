@@ -7,8 +7,9 @@
   padding-block: 1.5rem;
   padding-inline: variables.$page-margin-inline;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr 0.5fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: auto;
+  gap: 1rem;
   isolation: isolate;
 
   h3 {
@@ -28,8 +29,6 @@
 }
 
 .section {
-  grid-column: 1;
-
   h2 {
     margin-bottom: 2rem;
   }
@@ -47,7 +46,8 @@
   }
 
   address {
-    width: 35ch;
+    width: 100%;
+    max-width: 35ch;
   }
 }
 
@@ -63,9 +63,7 @@
 .follow_us_section {
   display: flex;
   gap: 0.5rem;
-  grid-column: 4;
-  align-self: last baseline;
-  justify-self: right;
+  justify-content: flex-end;
   font-size: 1.125rem;
 
   i {
@@ -78,7 +76,12 @@
 }
 
 .batik_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   opacity: 5%;
   z-index: -1;
-  object-fit: cover;
 }

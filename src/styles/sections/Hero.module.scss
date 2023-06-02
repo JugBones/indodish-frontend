@@ -2,9 +2,15 @@
 
 .container {
   display: flex;
+  flex-direction: column-reverse;
   justify-content: space-around;
   margin-block: 5rem;
   padding-inline: variables.$page-margin-inline;
+
+  @media (min-width: 1111px) {
+    flex-direction: row;
+    align-items: center;
+  }
 
   div {
     margin-block: max(5%, 2rem);
@@ -16,5 +22,19 @@
     font-weight: 800;
     margin-block: 2rem;
     width: 30ch;
+
+    @media (max-width: 1111px) {
+      text-align: center;
+      font-size: calc(1rem + 1vw);
+    }
+  }
+
+  .image_container {
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 800px) {
+      margin-block: 2rem;
+    }
   }
 }
