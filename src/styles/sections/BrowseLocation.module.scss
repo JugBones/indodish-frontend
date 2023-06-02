@@ -1,15 +1,16 @@
 @use '../variables.scss';
 
 .container {
-  position: relative;
-  display: flex;
-  justify-content: space-around;
   align-items: center;
-  padding-inline: variables.$page-margin-inline;
-  padding-block: min(10rem, 10%);
   background-color: variables.$bistre;
   color: variables.$white;
+  display: flex;
   isolation: isolate;
+  justify-content: space-around;
+  padding-block: min(10rem, 10%);
+  padding-inline: variables.$page-margin-inline;
+  position: relative;
+
   div {
     h2 {
       font-size: 2.5rem;
@@ -19,16 +20,16 @@
 
     p {
       font-size: 1.75rem;
-      width: 35ch;
       margin-bottom: 4rem;
+      width: 35ch;
       z-index: 1;
     }
   }
 }
 
 .batik_background {
-  -webkit-user-drag: none;
-  opacity: 5%;
-  z-index: -1;
   object-fit: cover;
+  opacity: 5%;
+  -webkit-user-drag: none;
+  z-index: -1;
 }
