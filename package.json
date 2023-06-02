@@ -36,12 +36,15 @@
     "react-dropzone": "^14.2.3",
     "react-leaflet": "^4.2.1",
     "react-redux": "^8.0.5",
+    "react-slick": "^0.29.0",
     "sharp": "^0.32.1",
+    "slick-carousel": "^1.8.1",
     "typescript": "^5.0.4"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.0.1",
     "@types/leaflet": "^1.9.3",
+    "@types/react-slick": "^0.23.10",
     "cypress": "^12.12.0",
     "sass": "^1.60.0"
   }
