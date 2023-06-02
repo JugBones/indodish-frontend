@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { Playfair_Display } from 'next/font/google';
 import PopFoodCard from "@/components/PopFoodCard";
 import styles from '@/styles/sections/PopularCuisine.module.scss';
@@ -28,6 +27,21 @@ export default function PopularCuisine({ cuisines }: PopularCuisineProps) {
         <PopFoodCard />
         <PopFoodCard />
       </div>
+      {/* <div className={styles.containerfood}>
+        <div className={styles.food1}>
+          <PopFoodCard />
+        </div>
+        <div className={styles.food2}>
+          <PopFoodCard />
+        </div>
+        <div className={styles.food3}>
+          <PopFoodCard />
+        </div>
+        <div className={styles.food4}>
+          <PopFoodCard />
+        </div>
+      </div> */}
+      
     </section>
   );
 }
