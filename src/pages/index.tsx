@@ -20,7 +20,7 @@ export default function Home() {
       <Hero />
       <BrowseLocation />
       {/* <NearbyRestaurant /> */}
-      <PopularCuisine cuisines={{}} />
+      <PopularCuisine />
       <Footer />
     </>
   );
