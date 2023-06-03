@@ -47,7 +47,7 @@ export default function Cuisine() {
       )}
 
       <NearbyRestaurant />
-      <RecipePost recipe={{}} />
+      <RecipePost/>
 
       <Footer />
     </>
