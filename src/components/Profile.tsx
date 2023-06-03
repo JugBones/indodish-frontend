@@ -38,10 +38,6 @@ export default function Profile() {
             <Spinner />
           ) : (
             <>
-              <MenuItem onClick={() => Router.push('/profile')}>
-                Profile
-              </MenuItem>
-              <MenuDivider />
               <MenuItem onClick={handleSignOut}>Sign out</MenuItem>
             </>
           )}

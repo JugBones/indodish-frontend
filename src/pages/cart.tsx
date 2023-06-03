@@ -20,7 +20,6 @@ export default function Cart() {
   useEffect(() => {
     dispatch(getCartItems());
   }, []);
-  console.log(cart);
   return (
     <>
       <Head>
@@ -60,6 +59,7 @@ export default function Cart() {
               />
             </div>
           )}
+          <div></div>
         </main>
       </div>
       <Footer />

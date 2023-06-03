@@ -37,9 +37,7 @@ export default function SearchRegion() {
             }}
           >
             <Link
-              href={`/search?region=${region
-                .split(' ')[1]
-                .toLocaleLowerCase()}`}
+              href={`/region/${region.split(' ')[1].toLocaleLowerCase()}`}
               style={{ color: 'inherit' }}
             >
               {region}
@@ -49,10 +47,10 @@ export default function SearchRegion() {
       </div>
       <div className={styles.backgroundContainer}>
         <Image
-        className={styles.batik_background}
-        src={BatikBackground}
-        alt='Batik Background'
-        fill
+          className={styles.batik_background}
+          src={BatikBackground}
+          alt='Batik Background'
+          fill
         />
       </div>
     </section>

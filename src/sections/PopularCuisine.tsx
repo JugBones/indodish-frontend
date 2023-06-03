@@ -1,46 +1,43 @@
 import { Playfair_Display } from 'next/font/google';
-import PopFoodCard from "@/components/PopFoodCard";
+import PopFoodCard from '@/components/PopFoodCard';
 import styles from '@/styles/sections/PopularCuisine.module.scss';
-
-
-interface PopularCuisineProps {
-  cuisines: {};
-}
+import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatch, RootState } from '@/store/store';
+import { useEffect } from 'react';
+import { getPopularCuisine } from '@/features/cuisineSlice';
 
 const playfairDisplay = Playfair_Display({
   weight: ['400', '600'],
   subsets: ['latin'],
 });
 
-export default function PopularCuisine({ cuisines }: PopularCuisineProps) {
+export default function PopularCuisine() {
+  const dispatch = useDispatch<AppDispatch>();
+  const { isLoading, error, dishes } = useSelector(
+    (state: RootState) => state.dish
+  );
+
+  useEffect(() => {
+    dispatch(getPopularCuisine());
+  }, []);
+
   return (
     <section className={`${styles.container} ${playfairDisplay.className}`}>
       <h2>Popular Cuisine</h2>
-      <p className={styles.desc}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut blandit arcu
-        in pretium molestie. Interdum et malesuada fames acme. Lorem ipsum dolor
-        sit amet, consectetur adipiscing elit.
-      </p>
       <div className={styles.wrapper}>
-        <PopFoodCard />
-        <PopFoodCard />
-        <PopFoodCard />
+        {dishes.length > 0
+          ? dishes.map((dish) => (
+              <PopFoodCard
+                key={dish.id}
+                name={dish.name}
+                description={dish.description}
+                price={dish.price}
+                rating_sum={dish.rating_sum}
+                number_of_voters={dish.number_of_voters}
+              />
+            ))
+          : 'Nothing'}
       </div>
-      {/* <div className={styles.containerfood}>
-        <div className={styles.food1}>
-          <PopFoodCard />
-        </div>
-        <div className={styles.food2}>
-          <PopFoodCard />
-        </div>
-        <div className={styles.food3}>
-          <PopFoodCard />
-        </div>
-        <div className={styles.food4}>
-          <PopFoodCard />
-        </div>
-      </div> */}
-      
     </section>
   );
 }

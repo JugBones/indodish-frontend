@@ -78,10 +78,10 @@ export const deleteCartItems = createAsyncThunk(
     const URL = `${process.env.NEXT_PUBLIC_API_URL}/cart`;
 
     try {
-      const response = await axios.delete(
-        `${URL}?cart_item_id=${cart_item_id}`,
-        { withCredentials: true }
-      );
+      const response = await axios.delete(URL, {
+        data: { cart_item_id: cart_item_id },
+        withCredentials: true,
+      });
       return response.data;
     } catch (error: unknown) {
       return thunkApi.rejectWithValue(error);

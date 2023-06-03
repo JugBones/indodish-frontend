@@ -3,4 +3,11 @@
   color: white;
   gap: 2rem;
   font-size: 1.5rem;
+  padding-block: 2rem;
+  justify-content: space-around;
+
+  > div {
+    display: flex;
+    gap: 1rem;
+  }
 }

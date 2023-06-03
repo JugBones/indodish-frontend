@@ -1,6 +1,6 @@
 import styles from '@/styles/components/MenuItem.module.scss';
 import Rating from './Rating';
-import { Button, Spinner } from '@chakra-ui/react';
+import { Button, Divider, Spinner } from '@chakra-ui/react';
 import { AppDispatch, RootState } from '@/store/store';
 import { useDispatch, useSelector } from 'react-redux';
 import { addCartItems } from '@/features/cartSlice';
