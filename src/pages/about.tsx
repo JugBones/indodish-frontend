@@ -89,11 +89,11 @@ export default function About() {
             <p>The Our Food Journey Team</p>
           </CardBody>
         </Card>
-        <Card>
+        {/* <Card>
         <CardBody>
             <p>test</p>
           </CardBody>
-        </Card>
+        </Card> */}
       </main>
       <Footer />
     </>

@@ -2,16 +2,16 @@ import styles from '@/styles/sections/RecipePost.module.scss';
 import RecipeCard from "../components/RecipeCard";
 import { Playfair_Display } from 'next/font/google';
 
-interface RecipePostProps {
-  recipe: {};
-}
+// interface RecipePostProps {
+//   recipe: {};
+// }
 
 const playfairDisplay = Playfair_Display({
   weight: ['400', '600'],
   subsets: ['latin'],
 });
 
-export default function PopularCuisine({ recipe }: RecipePostProps) {
+export default function PopularCuisine(/*{ recipe }: RecipePostProps*/) {
   return (
     <section className={`${styles.container} ${playfairDisplay.className}`}>
       <h2>Recipes</h2>
