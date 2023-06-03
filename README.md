@@ -32,6 +32,7 @@ Here is our attempt developing the [FrontEnd](https://github.com/JugBones/indodi
 ![](https://img.shields.io/badge/Language-TypeScript-informational?style=flat&logo=typescript&color=blue)
 ![](https://img.shields.io/badge/Database-PostGresQL-informational?style=flat&logo=postgresql&color=yellow)
 ![](https://img.shields.io/badge/Tools-FastAPI-informational?style=flat&logo=fastapi&color=purple)
+![](https://img.shields.io/badge/Tools-Vercel-informational?style=flat&logo=vercel&color=black)
 
 ## Script
 
