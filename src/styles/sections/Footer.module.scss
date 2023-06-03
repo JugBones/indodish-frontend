@@ -16,6 +16,17 @@
     font-size: 1.25rem;
     margin-block: 1rem;
   }
+
+  @media (max-width: 768px) {
+    // Styles for screens with a maximum width of 768px
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  @media (max-width: 480px) {
+    // Styles for screens with a maximum width of 480px
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.5rem;
+  }
 }
 
 .logo_container {
@@ -49,6 +60,20 @@
     width: 100%;
     max-width: 35ch;
   }
+
+  @media (max-width: 480px) {
+    // Styles for screens with a maximum width of 480px
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      span {
+        margin-right: 0;
+        margin-bottom: 0.25rem;
+      }
+    }
+  }
 }
 
 .navigation_link_items {
@@ -72,6 +97,11 @@
 
   & > a:hover {
     color: variables.$dandelion;
+  }
+
+  @media (max-width: 480px) {
+    // Styles for screens with a maximum width of 480px
+    justify-content: flex-start;
   }
 }
 

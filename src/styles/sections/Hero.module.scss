@@ -14,6 +14,11 @@
 
   div {
     margin-block: max(5%, 2rem);
+
+    @media (max-width: 1111px) {
+      text-align: center;
+      font-size: calc(1rem + 1vw);
+    }
   }
 
   h2 {
@@ -25,11 +30,10 @@
 
     @media (max-width: 1111px) {
       text-align: center;
-      font-size: calc(1rem + 1vw);
     }
   }
 
-  .image_container {
+.image_container {
     display: flex;
     justify-content: center;
 
