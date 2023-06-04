@@ -17,10 +17,61 @@
     font-size: 2rem;
     font-weight: 700;
     color: variables.$white;
+
+    @media (max-width: 768px) {
+      // Styles for screens with a maximum width of 768px
+      width: 80%;
+    }
+  
+    @media (max-width: 480px) {
+      // Styles for screens with a maximum width of 480px
+      width: 90%;
+      padding-top: 5%;
+    }
+  
+    @media (max-width: 360px) {
+      // Styles for screens with a maximum width of 360px
+      width: 100%;
+      padding-top: 2rem;
+    }
   }
 
   main {
     width: max(25em, 60%);
+
+    @media (max-width: 768px) {
+      // Styles for screens with a maximum width of 768px
+      width: 80%;
+    }
+  
+    @media (max-width: 480px) {
+      // Styles for screens with a maximum width of 480px
+      width: 90%;
+      padding-top: 5%;
+    }
+  
+    @media (max-width: 360px) {
+      // Styles for screens with a maximum width of 360px
+      width: 100%;
+      padding-top: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    // Styles for screens with a maximum width of 768px
+    width: 80%;
+  }
+
+  @media (max-width: 480px) {
+    // Styles for screens with a maximum width of 480px
+    width: 90%;
+    padding-top: 5%;
+  }
+
+  @media (max-width: 360px) {
+    // Styles for screens with a maximum width of 360px
+    width: 100%;
+    padding-top: 2rem;
   }
 }
 

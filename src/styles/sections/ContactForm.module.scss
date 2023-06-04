@@ -1,2 +1,13 @@
 .container {
+    @media (max-width: 480px) {
+        padding-inline: 1rem;
+      }
+    
+      @media (max-width: 360px) {
+        padding-inline: 0.5rem;
+      }
+    
+      @media (max-width: 250px) {
+        padding-inline: 0;
+      }
 }
