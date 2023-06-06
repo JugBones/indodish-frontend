@@ -24,7 +24,7 @@ module.exports = withPWA({
     return [
       {
         // matching all API routes
-        source: 'https://103.150.197.188/:path*',
+        source: '/:path*',
         headers: [
           { key: 'Access-Control-Allow-Credentials', value: 'true' },
           { key: 'Access-Control-Allow-Origin', value: '*' },
