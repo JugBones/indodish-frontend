@@ -9,6 +9,9 @@
   padding-inline: variables.$page-margin-inline;
 
   > div {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     color: variables.$white;
     margin-inline: 2rem;
 

@@ -10,6 +10,7 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { getCuisine } from '@/features/cuisineSlice';
 import { Spinner } from '@chakra-ui/react';
+import axios from 'axios';
 
 export default function Cuisine() {
   const dispatch = useDispatch<AppDispatch>();
@@ -26,6 +27,7 @@ export default function Cuisine() {
     dispatch(getCuisine(router.query.dish_name as string));
   }, [router.isReady]);
 
+  console.log(dish);
   return (
     <>
       <Head>
@@ -40,6 +42,7 @@ export default function Cuisine() {
         <Spinner />
       ) : (
         <CuisineDesc
+          id={dish.id}
           name={dish.name}
           description={dish.description}
           price={dish.price}
@@ -47,7 +50,7 @@ export default function Cuisine() {
       )}
 
       <NearbyRestaurant />
-      <RecipePost/>
+      <RecipePost />
 
       <Footer />
     </>

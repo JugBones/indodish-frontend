@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Remboelan from '../../public/Remboalan.jpg';
 import BatikBackground from '../../public/batik-background.webp';
 import styles from '@/styles/sections/RestaurantInfo.module.scss';
 import { Playfair_Display } from 'next/font/google';
@@ -33,8 +32,8 @@ export default function RestaurantInfo({
       />
       <div>
         <h3>{name}</h3>
-        <p>{description}</p>
-        <p>{address}</p>
+        <p>Description: {description}</p>
+        <p>Address: {address}</p>
       </div>
       <Image
         className={styles.batik_background}

@@ -14,7 +14,7 @@ interface RestaurantMenuProps {
       id: string;
       name: string;
       description: string;
-      price: number;
+      price: string;
       category: string;
       rating_sum: number;
       number_of_voters: number;

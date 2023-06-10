@@ -1,5 +1,12 @@
+@use '../variables.scss';
+
 .container {
   display: flex;
+  background-color: variables.$white;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  border: 1px solid #00000030;
+
   justify-content: space-between;
   p {
     font-size: 1.25rem;

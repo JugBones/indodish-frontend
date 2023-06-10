@@ -39,6 +39,19 @@ export const getRestaurant = createAsyncThunk(
   }
 );
 
+export const searchRestaurants = createAsyncThunk(
+  'searchRestaurants',
+  async (q: string, thunkApi) => {
+    const URL = `${process.env.NEXT_PUBLIC_API_URL}/restaurants/${q}`;
+    try {
+      const response = await axios.get(URL);
+      return response.data;
+    } catch (error: unknown) {
+      return thunkApi.rejectWithValue(error);
+    }
+  }
+);
+
 interface Restaurant {
   id: string;
   name: string;
@@ -53,7 +66,7 @@ interface Restaurant {
       description: string;
       rating_sum: number;
       number_of_voters: number;
-      price: number;
+      price: string;
       category: string;
     }
   ];
@@ -63,6 +76,7 @@ const initialState = {
   isLoading: false,
   restaurants: [] as Restaurant[],
   restaurant: {} as Restaurant,
+  searchRestaurantResults: [] as Restaurant[],
   error: null as unknown | null,
 };
 
@@ -95,6 +109,20 @@ const restaurantSlice = createSlice({
       state.error = null;
     });
     builder.addCase(getRestaurant.rejected, (state, action) => {
+      state.isLoading = false;
+      state.error = action.payload;
+    });
+
+    builder.addCase(searchRestaurants.fulfilled, (state, action) => {
+      state.isLoading = false;
+      state.searchRestaurantResults = action.payload;
+      state.error = null;
+    });
+    builder.addCase(searchRestaurants.pending, (state, _) => {
+      state.isLoading = false;
+      state.error = null;
+    });
+    builder.addCase(searchRestaurants.rejected, (state, action) => {
       state.isLoading = false;
       state.error = action.payload;
     });

@@ -43,6 +43,20 @@ export const getRegionCuisine = createAsyncThunk(
   }
 );
 
+export const searchCuisine = createAsyncThunk(
+  'searchCuisine',
+  async (q: string, thunkApi) => {
+    const URL = `${process.env.NEXT_PUBLIC_API_URL}/dishes/search/${q}`;
+    try {
+      const response = await axios.get(URL);
+
+      return response.data;
+    } catch (error: unknown) {
+      return thunkApi.rejectWithValue(error);
+    }
+  }
+);
+
 interface Dish {
   id: string;
   name: string;
@@ -57,6 +71,7 @@ const initialState = {
   dish: {} as Dish,
   dishes: [] as Dish[],
   regionDish: [] as Dish[],
+  searchDish: [] as Dish[],
   error: null as unknown | null,
 };
 
@@ -103,6 +118,20 @@ const dishSlice = createSlice({
       state.error = null;
     });
     builder.addCase(getRegionCuisine.rejected, (state, action) => {
+      state.isLoading = false;
+      state.error = action.payload;
+    });
+
+    builder.addCase(searchCuisine.fulfilled, (state, action) => {
+      state.isLoading = false;
+      state.searchDish = action.payload;
+      state.error = null;
+    });
+    builder.addCase(searchCuisine.pending, (state, _) => {
+      state.isLoading = false;
+      state.error = null;
+    });
+    builder.addCase(searchCuisine.rejected, (state, action) => {
       state.isLoading = false;
       state.error = action.payload;
     });

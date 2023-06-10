@@ -9,7 +9,7 @@ interface MenuItemProps {
   id: string;
   name: string;
   description: string;
-  price: number;
+  price: string;
 }
 
 export default function MenuItem({
@@ -22,10 +22,9 @@ export default function MenuItem({
   const { isLoading } = useSelector((state: RootState) => state.cart);
   return (
     <div className={styles.container}>
-      {/* <Image src={`${process.env.NEXT_PUBLIC_API_URL}/images/dish-image`} /> */}
       <h3>{name}</h3>
       <p>{description}</p>
-      <p>{price}</p>
+      <p>{`Rp. ${parseFloat(price?.slice(1)) * 1000}`}</p>
       <Button
         colorScheme='orange'
         onClick={() => {
